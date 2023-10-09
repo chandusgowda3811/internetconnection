@@ -1,0 +1,89 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+}
+
+.status-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+#status {
+    font-size: 30px;
+    color: #333333;
+    font-weight: bold;
+}
+
+body.offline {
+    background-color: #ff0000; /* Red background when offline */
+    transition: background-color 0.5s;
+}
+
+body.online {
+    background-color: #00ff00; /* Green background when online */
+    transition: background-color 0.5s;
+}
+
+#checkButton {
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none; /* Remove the button focus outline */
+}
+
+#checkButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+#checkButton:focus {
+    box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.5); /* Add a focus border */
+}
